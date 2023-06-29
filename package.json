@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "prop-types": "^15.8.1",
+    "react-router-dom": "^5.3.4",
+    "sass": "^1.63.6"
+  }
+}
