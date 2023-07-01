@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './components/Home';
-import Survey from './components/Apropos';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Home from './Pages/Home/Home';
+import Survey from './Pages/Apropos/Apropos';
+import Header from './Pages/Composants/Header';
+import Footer from './Pages/Composants/Footer';
+import './Pages/Composants/Composants.css';
 
 // import Error from './D404';
 // import Logement from './Fichelogement';
