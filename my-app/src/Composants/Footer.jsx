@@ -15,6 +15,7 @@ function Footer() {
 
         </div>
         <div className="footernav">
+            <i class="fa-regular fa-copyright"></i>
             <h2>2020 Kasa, All rights reserved</h2>
             </div></>
             </div>
