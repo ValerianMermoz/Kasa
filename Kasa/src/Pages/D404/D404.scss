@@ -1,0 +1,12 @@
+.texterreur {
+    display : flex;
+    color : #FF6060;
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
+    gap : 20px;
+
+    & h1 {
+        font-size : 235px;
+    }
+}

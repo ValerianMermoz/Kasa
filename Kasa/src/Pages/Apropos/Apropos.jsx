@@ -1,4 +1,4 @@
-function Survey() {
+function Propos() {
   return (
     <div className="Conteneurpropos">
       <div className="cardpropos">
@@ -17,4 +17,4 @@ function Survey() {
   );
 }
 
-export default Survey;
+export default Propos;
