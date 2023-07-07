@@ -12,11 +12,23 @@ body {
 }
 
 
-h1,h2,h3,p {
+h1,h2,h3, p {
   font-family : Montserrat;
   font-weight : 500;
   font-size : 24px;
   Line-height : 34.22px;
+}
+
+h3 {
+  color : white;
+  font-size : 48px;
+  font-weight : 500;
+}
+
+h4 {
+  color : #FF6060;  
+  font-size : 36px;
+  font-weight : 500;
 }
 
 code {
@@ -24,12 +36,3 @@ code {
     monospace;
 }
 
-.Bannercontainer {
-  width : 90%;
-}
-
-.Banner {
-  width : 100%;
-  object-fit : cover;
-
-}

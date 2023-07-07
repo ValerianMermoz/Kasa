@@ -4,9 +4,14 @@
     flex-direction : column;
     justify-content : center;
     align-items : center;
-    gap : 20px;
+    gap : 80px;
+    padding-bottom : 80px;
 
-    & h1 {
-        font-size : 235px;
+    & a {
+        text-decoration : underline;
     }
+}
+
+.Erreurimg {
+    width : 50%;
 }

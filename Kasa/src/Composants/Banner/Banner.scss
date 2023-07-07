@@ -1,0 +1,27 @@
+
+.Bannercontainer {
+    width : 90%;
+  }
+  
+  .Banner {
+    width : 100%;
+    object-fit : cover;
+  }  
+
+.Bannerconteneur {
+    position : relative;
+    margin : 50px 50px;
+}
+
+.Banner {
+    filter: brightness(75%);
+    height : 220px;
+    border-radius : 25px;
+}
+
+.texte {
+    position : absolute;
+    z-index : 1;
+    top : 100px;
+    left : 600px;
+}
