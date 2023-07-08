@@ -13,7 +13,7 @@ import './Composants/Banner/Banner.scss';
 import Banner from './Composants/Banner/Banner';
 import Error from './Pages/D404/D404';
 import './Pages/D404/D404.scss';
-// import Logement from './Fichelogement';
+import Logement from './Pages/Fichelogement/Fichelogement';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,6 +23,7 @@ root.render(
       <Banner />
       <Routes>
         <Route exact path="/" element={<Home/>}/>
+        <Route path="/Fichelogement" element={<Logement />} />
         <Route path="/Apropos" element={<App />} />
         <Route path="/D404" element={<Error />} />
       </Routes>
