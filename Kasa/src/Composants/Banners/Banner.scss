@@ -1,0 +1,38 @@
+@use "../../index.scss" as s;
+
+.Banner {
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(75%);
+  height: 220px;
+  border-radius: 25px;
+
+  &.Bannerconteneur {
+    margin: 50px 50px;
+
+    &.texte {
+      width : 100%;
+      position: absolute;
+      z-index: 1;
+      top : 100px;
+      text-align :  center;
+      @include s.mobile-only {
+        width : 55%;
+        text-align : start; 
+       }
+    }
+  }
+
+  &.Conteneurimage {
+    position: relative;
+  }
+
+  
+}
+
+
+.large{
+  height: 350px;
+}
+
+

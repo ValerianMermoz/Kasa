@@ -1,5 +1,6 @@
 import React from 'react';
 import Accordion from './Accordion';
+import Banner2 from '../../Composants/Banners/Banner2';
 
 const App = () => {
   const accordionData = [
@@ -23,6 +24,7 @@ const App = () => {
 
   return (
     <div>
+      <Banner2/>
       <div className="accordion">
         {accordionData.map(({ title, content }) => (
           <Accordion title={title} content={content} />

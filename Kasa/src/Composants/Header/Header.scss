@@ -1,0 +1,26 @@
+@use "../../index.scss" as s;
+
+.Header {
+  height: 100px;
+  margin: 50px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: unset;
+
+  & h2 {
+    color: white;
+  }
+  & a {
+    font-size: 22px;
+    color: #ff6060;
+    text-decoration: none;
+  }
+  & .headernav {
+    width: unset;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+}

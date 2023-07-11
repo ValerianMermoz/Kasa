@@ -1,33 +1,47 @@
-.accordion {
-    display : flex;
-    flex-direction : column;
-    max-width: 75%;
-    margin: 2rem auto;
-    gap : 20px;
-  }
+@use "../../index.scss" as s;
 
-  .accordion-title {
+.accordion {
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+  margin: 2rem auto;
+  gap: 25px;
+  @include s.mobile-only {
+    max-width: 90%;
+  }
+  & .accordion-title {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     cursor: pointer;
-    background-color: #FF6060
-
-  }
-  
-  .accordion-title:hover {
-    background-color: #FF6060
-    ;
-  }
-  
-  .accordion-title,
-  .accordion-content {
+    background-color: #ff6060;
     padding: 1rem;
-    border-radius : 5px;
+    border-radius: 5px;
   }
-  
-  .accordion-content {
-    font-size : 18px;
-    color : #FF6060;
-    background-color: #F6F6F6;
+
+  & .accordion-content {
+    font-size: 18px;
+    color: #ff6060;
+    background-color: #f6f6f6;
   }
+}
+
+//  .Chevrondown {
+//    @include a.chevron;
+
+//  }
+
+//  @mixin chevron {
+//   background-color: red;
+//   animation: anima 0.5s 0.5s  linear both;
+// }
+
+// @keyframes anima {
+//   0% {
+//     transform: rotate(180deg);
+//   }
+//   100% {
+//     transform: rotate(0)
+//   }
+
+// }

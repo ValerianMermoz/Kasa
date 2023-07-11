@@ -1,21 +1,38 @@
-.Cardcontainer {
-    display : flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content:center;
-    gap : 40px;
-    margin : 50px 50px;
-    background-color : #F6F6F6;
-    border-radius : 5px;
-    padding : 40px;
-}
+@use "../../index.scss" as s;
 
-.Card {
-    width : 20%;
-    height : 340px;
-    border : 1px solid #000000;
-    padding: 3rem;
-    border-radius : 5px;
-    background: linear-gradient(#FFFFFF
-    , #000000);
+.Cardcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 50px 50px;
+  background-color: #f6f6f6;
+  border-radius: 15px;
+  padding: 40px;
+
+  & .Card {
+    width: 20%;
+    height: 340px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    background: linear-gradient(0.5turn, #ff6060, #9c5757);
+    @include s.mobile-only {
+      width: 100%;
+    }
+    & a {
+      text-decoration: none;
+      color: white;
+    }
+
+    & .titrecard {
+      height: 100%;
+      width: 30%;
+      padding-left: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+  }
 }

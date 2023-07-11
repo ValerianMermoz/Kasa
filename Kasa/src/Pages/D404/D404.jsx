@@ -1,4 +1,5 @@
 import Erreurimg from '../../Images/404.png';
+import './D404.scss';
 
 function Error() {
   return (
