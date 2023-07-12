@@ -18,30 +18,29 @@
     padding: 1rem;
     border-radius: 5px;
   }
-
   & .accordion-content {
     font-size: 18px;
     color: #ff6060;
     background-color: #f6f6f6;
+    padding: 1rem;
+    border-radius: 5px;
   }
 }
 
-//  .Chevrondown {
-//    @include a.chevron;
+// .Chevrondown {
+//     @include Chevron
+// }
 
+// @mixin Chevron {
+// animation: anima 0.5s 0.5s  linear both;
 //  }
 
-//  @mixin chevron {
-//   background-color: red;
-//   animation: anima 0.5s 0.5s  linear both;
-// }
-
 // @keyframes anima {
-//   0% {
-//     transform: rotate(180deg);
-//   }
-//   100% {
-//     transform: rotate(0)
-//   }
+//    0% {
+//      transform: rotate(180deg);
+//    }
+//    100% {
+//      transform: rotate(0)
+//    }
 
-// }
+//  }

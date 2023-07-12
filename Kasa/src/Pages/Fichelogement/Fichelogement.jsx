@@ -1,14 +1,11 @@
-// import Data from '../../annonces';
+import Data from '../../annonces';
 
 
 function FicheLogement() {
-    return (
-        <div className='Containerlogement'>
+{Data.map((Élement) =>
 
-        </div>
-    )
-    }
+<h2 key={Élement.title}></h2>
 
-
+)}}
 export default FicheLogement
 
