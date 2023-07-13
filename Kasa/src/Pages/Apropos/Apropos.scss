@@ -27,20 +27,21 @@
   }
 }
 
-// .Chevrondown {
-//     @include Chevron
-// }
 
-// @mixin Chevron {
-// animation: anima 0.5s 0.5s  linear both;
-//  }
 
-// @keyframes anima {
-//    0% {
-//      transform: rotate(180deg);
-//    }
-//    100% {
-//      transform: rotate(0)
-//    }
+@mixin Chevron {
+animation: anima 0.5s 0.5s  linear both;
+ }
+ .Chevrondown {
+  @include Chevron;
+}
 
-//  }
+@keyframes anima {
+   0% {
+     transform: rotate(0deg);
+   }
+   100% {
+     transform: rotate(180deg)
+   }
+
+ }

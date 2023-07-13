@@ -1,14 +1,15 @@
+import "../../Composants/Banners/Banner.scss";
 
-
-const Banner = ({image, text}) => {
+const Banner = ({ image, text, page }) => {
   return (
-  <div className="Bannerconteneur">
-  <img src={image} alt=""/>
-  <h2>{text}</h2>
-  </div>
-)}
-
-
+    <div className={page == "Home" ? "Bannerimg" : "Bannerlarge"}>
+      <img src={image} alt="" className="Bannerimage"/>
+      <div className="texte">
+        <h3>{text}</h3>
+      </div>
+    </div>
+  );
+};
 
 // { <Banner text="chez ...." image="../../Images/Banneraccueil.png" page="Home"/>;}
 

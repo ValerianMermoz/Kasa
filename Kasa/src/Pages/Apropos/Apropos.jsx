@@ -1,8 +1,9 @@
 import React from 'react';
 import Accordion from './Accordion';
+import Banner from "../../Composants/Banners/Banner";
+import img from "../../Images/Bannerpropos.png";
 
-
-const App = () => {
+const Apropos = () => {
   const accordionData = [
     {
       title: 'Fiabilité',
@@ -24,6 +25,7 @@ const App = () => {
 
   return (
     <div>
+      <Banner image={img}/>
       <div className="accordion">
         {accordionData.map(({ title, content }) => (
           <Accordion title={title} content={content} />
@@ -33,4 +35,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Apropos;
