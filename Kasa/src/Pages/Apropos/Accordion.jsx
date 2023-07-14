@@ -1,6 +1,6 @@
 import './Apropos.scss';
-
 import React, { useState } from 'react';
+
 const Chevrondown = require('../../Images/Flechebas.png');
 
 const Accordion = ({ title, content }) => {

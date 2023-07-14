@@ -1,13 +1,24 @@
 import Data from '../../annonces';
 import { useParams } from 'react-router-dom';
+import Accordionlogement from "../../Composants/Logement/Accordionlogement"
+import Titrelogement from "../../Composants/Logement/Contenulogement";
+import Carrousel from "../../Composants/Logement/CarrouselComposent";
 
 
-function FicheLogement() {
+
+const FicheLogement = () => {
+    const {id} = useParams()
+    const logement = Data.find((item) => item.id === id)
     return (
-Data.map((id) =>
-
-<h2 key={id.id}></h2>
-
-))}
-export default FicheLogement
+        <div>
+            <Carrousel/>
+            <Titrelogement/>
+            <section className='Accordionlog'>
+            <Accordionlogement text="Description" content={logement.description}/>
+            <Accordionlogement text="Equipement" content={<ul>{logement.equipments.map((equipements) => <li>{equipements}</li>)}</ul>}/>
+            </section>
+            </div>
+    )
+}
+export default FicheLogement;
 

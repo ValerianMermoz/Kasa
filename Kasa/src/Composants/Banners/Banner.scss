@@ -2,7 +2,6 @@
 
 .Bannerimg {
   position: relative;
-  width: 100%;
   margin: 50px 50px;
 }
 
@@ -13,21 +12,36 @@
   top : 100px;
   text-align: center;
   @include s.mobile-only {
-    width: 55%;
+    top : 20px;
+    width: 3%;
+    padding-left : 10px;
     text-align: start;
+  }
+  & h3 {
+    @include s.mobile-only {
+      font-size : 28px;
+    }
   }
 }
 .Bannerimage {
-  width : 95%;
+  width : 100%;
   object-fit : cover;
   filter: brightness(75%);
   height: 220px;
   border-radius: 25px;
+  @include s.mobile-only {
+    height : 110px;
+  }
 }
 
 .Bannerlarge {
+  width : 100%;
+  object-fit : cover;
+  filter: brightness(75%);
+  height: 220px;
+  border-radius: 25px;
   @include s.mobile-only {
-    max-height : 350px;
+    height : 400px;
   }
 }
 

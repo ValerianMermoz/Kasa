@@ -1,4 +1,9 @@
 @use "../../index.scss" as s;
+* {
+  margin: 0;
+  padding: 0;
+}
+
 
 .Footer {
   background-color: black;
