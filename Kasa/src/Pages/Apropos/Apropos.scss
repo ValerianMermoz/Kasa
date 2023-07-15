@@ -17,6 +17,11 @@
     background-color: #ff6060;
     padding: 1rem;
     border-radius: 5px;
+
+    & .Chevron {
+      display : flex;
+      align-items : center;
+    }
   }
   & .accordion-content {
     font-size: 18px;

@@ -6,12 +6,14 @@ import useLogement from "./Datalogement";
 
 function Carrousel(){
     const logement = useLogement();
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const nextImage = () => {
-        setCurrentImageIndex((nextIndex) => (nextIndex + 1) % logement.pictures.length)
+    const [imageActuelle, imageIndex] = useState(0);
+    const image = logement.pictures[imageActuelle]
+    const compteur = `${imageActuelle + 1} / ${logement.pictures.length}`
+    const imageSuivante = () => {
+        imageIndex((nextIndex) => (nextIndex + 1) % logement.pictures.length)
     };
-    const previousImage = () => {
-        setCurrentImageIndex((prevIndex) => {
+    const imagePrecedente = () => {
+        imageIndex((prevIndex) => {
             if (prevIndex === 0){
                 return logement.pictures.length - 1;
             } else {
@@ -19,16 +21,14 @@ function Carrousel(){
             }
         });
     }
-    const currentImage = logement.pictures[currentImageIndex]
-    const pictureCounter = `${currentImageIndex + 1} / ${logement.pictures.length}`
 
     return (
-        <section className="carrousel">
-            <img src={currentImage} alt="logement" className="carrousel_img"/>
-            <img src={Flechedroite} alt="" onClick={nextImage} className="carrousel__arrow carrousel__arrow--right"></img>
-            <img src={Flechegauche} alt="" onClick={previousImage} className="carrousel__arrow carrousel__arrow--left"></img>
-            <div className="carrousel_counter">{pictureCounter}</div>
-        </section>
+        <div className="carrousel">
+            <img className="carrousel_img" src={image} alt="logement"/>
+            <img className="carrousel__arrow carrousel__flechedroite" src={Flechedroite} alt="" onClick={imageSuivante}></img>
+            <img className="carrousel__arrow carrousel__flechegauche" src={Flechegauche} alt="" onClick={imagePrecedente}></img>
+            <div className="carrousel_compteur">{compteur}</div>
+        </div>
     )
 }
 export default Carrousel;

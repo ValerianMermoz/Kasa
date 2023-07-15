@@ -1,3 +1,10 @@
+@use "../../index.scss" as s;
+
+* {
+  margin : 0;
+  padding : 0;
+}
+
 
 .carrousel {
   margin: 50px 50px;
@@ -11,19 +18,19 @@
   }
   &__arrow {
     position: absolute;
-    bottom: 35%;
+    bottom: 40%;
     z-index: 3;
-    width: 96px;
-    height : 150px;
+    width: 40px;
+    height : 60px;
     cursor: pointer;
   }
-  &__arrow--right  {
+  &__flechedroite  {
     right: 20px;
   }
-  &__arrow--left {
+  &__flechegauche {
     left: 20px;
   }
-  &_counter {
+  &_compteur {
     position: absolute;
     bottom: 20px;
     right: 50%;
@@ -112,10 +119,20 @@
   flex-direction: row;
   width : 100%;
   gap: 25px;
+
+  @include s.mobile-only {
+    flex-direction : column;
+  }
+
   
   & .accordion-item {
     width : 50%;
     margin : 50px 50px;
+
+    @include s.mobile-only {
+      width : 90%;
+      margin : 25px 50px;
+    }
   }
 
   & .accordion-title {
@@ -126,6 +143,11 @@
     background-color: #ff6060;
     padding: 1rem;
     border-radius: 15px;
+
+    & .Chevron {
+      display : flex;
+      align-items : center;
+    }
   }
 
   & .accordion-content {

@@ -11,7 +11,7 @@ const AccordionLogement = ({ content, text }) => {
       <div className="accordion-item">
         <div className="accordion-title" >
           <h2>{text}</h2>
-          <div onClick={() => setIsActive(!isActive)}><img src={Chevrondown}className='Chevrondown'></img></div>
+          <div  className="Chevron" onClick={() => setIsActive(!isActive)}><img src={Chevrondown}className='Chevrondown'></img></div>
         </div>
         {isActive && <p className="accordion-content">{content}</p>}
       </div>
