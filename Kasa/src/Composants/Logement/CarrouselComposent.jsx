@@ -4,24 +4,25 @@ import Flechedroite from "../../Images/Flechedroite.png";
 import "../../Pages/Fichelogement/Fichelogement.scss";
 import useLogement from "./Datalogement";
 
-function Carrousel(){
+const Carrousel = () => {
     const logement = useLogement();
-    const [imageActuelle, imageIndex] = useState(0);
-    const image = logement.pictures[imageActuelle]
-    const compteur = `${imageActuelle + 1} / ${logement.pictures.length}`
+    const [imageActuelle, setImageActuelle] = useState(0);
+    const image = logement.pictures[imageActuelle];
+    const compteur = `${imageActuelle + 1} / ${logement.pictures.length}`;
+  
     const imageSuivante = () => {
-        imageIndex((nextIndex) => (nextIndex + 1) % logement.pictures.length)
-    };
-    const imagePrecedente = () => {
-        imageIndex((prevIndex) => {
-            if (prevIndex === 0){
-                return logement.pictures.length - 1;
-            } else {
-                return (prevIndex - 1) % logement.pictures.length;
-            }
+        setImageActuelle((prevIndex) => {
+          const nextIndex = prevIndex + 1;
+          return nextIndex === logement.pictures.length ? 0 : nextIndex;
         });
-    }
-
+      };
+    
+      const imagePrecedente = () => {
+        setImageActuelle((prevIndex) => {
+          const nextIndex = prevIndex - 1;
+          return nextIndex < 0 ? logement.pictures.length - 1 : nextIndex;
+        });
+      };
     return (
         <div className="carrousel">
             <img className="carrousel_img" src={image} alt="logement"/>

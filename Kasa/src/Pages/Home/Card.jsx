@@ -1,17 +1,19 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function Card(id) {
+function Card({ id, picture, title }) {
   const path = `/Fichelogement/${id.id}`;
   let history = useNavigate();
   function handleClick() {
     history(path);
   }
 
-  console.log(id.id);
   return (
     <div className="Card" onClick={handleClick}>
       <div className="titrecard">
-        <h2>Titre de la location</h2>
+        <img className="image" src={picture} alt={title}></img>
+        <div className="texteCard">
+          <h2>{title}</h2>
+        </div>
       </div>
     </div>
   );

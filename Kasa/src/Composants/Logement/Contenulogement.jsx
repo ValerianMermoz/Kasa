@@ -9,12 +9,16 @@ const Titrelogement = () => {
   const rating = logement.rating;
   const maxRating = 5;
   const etoiles = [];
+
   for (let i = 1; i <= maxRating; i++) {
+    const isEtoileActive = i <= rating;
+
     etoiles.push(
-      <img className="etoile"
+      <img
+        className="etoile"
         key={i}
-        src={i <= rating ? etoileactive : etoileinactive}
-        alt={i <= rating ? "Etoile active" : "Etoile inactive"}
+        src={isEtoileActive ? etoileactive : etoileinactive}
+        alt={isEtoileActive ? "Etoile active" : "Etoile inactive"}
       />
     );
   }
