@@ -23,7 +23,7 @@ const AccordionLogement = ({ content, text }) => {
           ></img>
         </div>
       </div>
-      {isActive && <p className="accordion-content">{content}</p>}
+      {isActive && <div className={`accordion-content ${rotateChevron ? "ouvert" : ""}`}>{content}</div>}
     </div>
   );
 };

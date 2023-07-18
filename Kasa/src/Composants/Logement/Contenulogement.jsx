@@ -24,12 +24,12 @@ const Titrelogement = () => {
   }
   return (
     <section>
-        <div className="title">
-            <div className="tilte_info">
+        <div className="titre">
+            <div className="titre_info">
                 <h1>{logement.title}</h1>
                 <p>{logement.location}</p>
             </div>
-            <div className="title_name">
+            <div className="titre_nom">
                 <p>{logement.host.name}</p>
                 <img className="photovendeur" src={logement.host.picture} alt={logement.host.name}></img>
             </div>

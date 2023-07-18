@@ -3,7 +3,6 @@
 .Cardcontainer {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
   gap: 70px;
   margin: 50px 50px;
@@ -12,12 +11,12 @@
   padding: 40px;
 
   & .Card {
-    position : relative;
+    position: relative;
     width: 23%;
     height: 340px;
     border-radius: 15px;
     background: linear-gradient(0.5turn, #ff6060, #9c5757);
-    cursor : pointer;
+    cursor: pointer;
     @include s.mobile-only {
       width: 100%;
     }
@@ -32,23 +31,22 @@
       align-items: flex-end;
 
       & .texteCard {
-        position : absolute;
-        padding-bottom : 15px;
-        padding-left : 15px;
+        position: absolute;
+        padding-bottom: 15px;
+        padding-left: 15px;
 
         & h2 {
-          font-weight : 500;
-          font-size : 24px;
-          color : white;
+          font-weight: 500;
+          font-size: 24px;
+          color: white;
         }
       }
 
-
       & .image {
-        object-fit : cover;
-        height : 340px;
-        width : 100%;
-        border-radius : 15px;
+        object-fit: cover;
+        height: 340px;
+        width: 100%;
+        border-radius: 15px;
       }
     }
   }
