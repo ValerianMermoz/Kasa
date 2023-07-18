@@ -12,12 +12,15 @@
   top : 100px;
   text-align: center;
   @include s.mobile-only {
-    top : 20px;
-    width: 40%;
-    padding-left : 10px;
-    text-align: start;
+    top : 35px;
+    width: 100%;
+    text-align: center;
   }
   & h3 {
+      color : white;
+      font-size : 48px;
+      font-weight : 500;
+    
     @include s.mobile-only {
       font-size : 28px;
     }
@@ -28,7 +31,7 @@
   object-fit : cover;
   filter: brightness(75%);
   height: 220px;
-  border-radius: 25px;
+  border-radius: 40px;
   @include s.mobile-only {
     height : 110px;
   }

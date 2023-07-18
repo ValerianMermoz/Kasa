@@ -17,34 +17,51 @@
     background-color: #ff6060;
     padding: 1rem;
     border-radius: 5px;
-
-    & .Chevron {
-      display : flex;
-      align-items : center;
+    & h2 {
+      font-weight: 500;
+      font-size: 24px;
+      color: white;
     }
   }
+
+  @keyframes openModal {
+    0% {
+      transform: translateY(5%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes closeModal {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(5%);
+    }
+  }
+
   & .accordion-content {
+    transition: all 10s linear;
     font-size: 18px;
     color: #ff6060;
     background-color: #f6f6f6;
     padding: 1rem;
     border-radius: 5px;
+    animation: openModal .5s linear;
+  }
+  .accordion-content.ouvert {
+    animation: closeModal .5s linear;
   }
 }
 
-@mixin Chevron {
-animation: anima 0.5s 0.5s  linear both;
- }
- .Chevrondown {
-  @include Chevron;
+.filters__chevron {
+  border-radius: 2px;
+  transition: all 0.5s linear;
 }
 
-@keyframes anima {
-   0% {
-     transform: rotate(0deg);
-   }
-   100% {
-     transform: rotate(180deg)
-   }
-
- }
+.filters__chevron.rotate {
+  transition: all 0.5s linear;
+  transform: rotate(-180deg);
+}

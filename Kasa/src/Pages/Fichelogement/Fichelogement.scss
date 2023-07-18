@@ -37,6 +37,9 @@
     font-size: 18px;
     font-weight: 500;
     letter-spacing: -2px;
+    @include s.mobile-only {
+      display:none;
+    }
   }
 }
 ///
@@ -127,6 +130,12 @@
   & .accordion-item {
     width : 50%;
     margin : 50px 50px;
+    & h2 {
+      font-weight : 500;
+      font-size : 24px;
+      Line-height : 34.22px;
+      color: white;
+    }
 
     @include s.mobile-only {
       width : 90%;

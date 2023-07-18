@@ -28,7 +28,7 @@ const Apropos = () => {
       <Banner image={img}/>
       <div className="accordion">
         {accordionData.map(({ title, content }) => (
-          <Accordion title={title} content={content} />
+          <Accordion key={title} title={title} content={content} />
         ))}
       </div>
     </div>

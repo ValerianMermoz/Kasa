@@ -5,7 +5,7 @@ import Banner from "../../Composants/Banners/Banner";
 import img from "../../Images/Banneraccueil.png";
 
 function Home() {
-  const Cards = Data.map((Element) => <Card id={Element.id} picture={Element.cover} title={Element.title}/>);
+  const Cards = Data.map((Element) => <Card key={Element.id} id={Element.id} picture={Element.cover} title={Element.title}/>);
   return (
     <div>
       <Banner image={img} text="Chez vous, partout et ailleurs" page="Home"/>
