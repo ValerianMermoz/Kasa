@@ -1,49 +1,45 @@
 import "../../Pages/Fichelogement/Fichelogement.scss";
 import "../../index.scss";
-import etoileactive from "../../Images/étoileactive.png";
-import etoileinactive from "../../Images/étoileinactive.png";
 import useLogement from "../Logement/Datalogement";
+import { ReactComponent as Etoile } from "../../Images/etoile.svg";
+import { ReactComponent as EtoileCouleur } from "../../Images/etoileCouleur.svg";
 
 const Titrelogement = () => {
-  const logement = useLogement();
-  const rating = logement.rating;
+  const { title, location, host, tags, rating } = useLogement();
+ 
   const maxRating = 5;
-  const etoiles = [];
+  const etoiles =
+  Array.from({ length: maxRating }, (_, index) => (
+  <>
+  {index < rating ? <EtoileCouleur/> : <Etoile/> }
+  </>
+  ));
 
-  for (let i = 1; i <= maxRating; i++) {
-    const isEtoileActive = i <= rating;
-
-    etoiles.push(
-      <img
-        className="etoile"
-        key={i}
-        src={isEtoileActive ? etoileactive : etoileinactive}
-        alt={isEtoileActive ? "Etoile active" : "Etoile inactive"}
-      />
-    );
-  }
   return (
-    <section>
+    <>
+      <section className="detailsLog">
         <div className="titre">
-            <div className="titre_info">
-                <h1>{logement.title}</h1>
-                <p>{logement.location}</p>
-            </div>
-            <div className="titre_nom">
-                <p>{logement.host.name}</p>
-                <img className="photovendeur" src={logement.host.picture} alt={logement.host.name}></img>
-            </div>
+          <div className="titre_info">
+            <h1>{title}</h1>
+            <p>{location}</p>
+          </div>
+          <div className="infostags">
+            {tags.map((tag, index) => (
+              <p key={index}>{tag}</p>
+            ))}
+          </div>
+         
         </div>
         <div className="infos">
-            <div className="infostags">
-                {logement.tags.map((tag, index)=>(
-                    <p key={index}>{tag}</p>
-                ))}
-            </div>
-            <div className="Etoiles">{etoiles}</div>
+          <div className="titre_nom">
+            <p>{host.name}</p>
+            <img className="photovendeur" src={host.picture} alt={host.name} />
+          </div>
+          <div className="etoiles">{etoiles}</div>
         </div>
-    </section>
-  )
-}
+      </section>
+    </>
+  );
+};
 
 export default Titrelogement;
