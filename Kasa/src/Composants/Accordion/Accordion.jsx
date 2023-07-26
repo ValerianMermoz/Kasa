@@ -1,10 +1,9 @@
 import { useState } from "react";
-import "../../Pages/Fichelogement/Fichelogement.scss";
-import "../../Pages/Apropos/Apropos.scss";
+import "../Accordion/Accordion.scss";
 
 const Chevrondown = require("../../Images/Flechebas.png");
 
-const AccordionLogement = ({ content, text }) => {
+const Accordion = ({ content, text, title }) => {
   const [isActive, setIsActive] = useState(false);
   const [rotateChevron, setRotateChevron] = useState(false);
 
@@ -13,7 +12,7 @@ const AccordionLogement = ({ content, text }) => {
   return (
     <div className="accordion-item">
       <div className="accordion-title">
-        <h2>{text}</h2>
+        <h2>{title}{text}</h2>
         <div className="Chevron" onClick={() => setIsActive(!isActive)}>
           <img
             src={Chevrondown}
@@ -32,4 +31,4 @@ const AccordionLogement = ({ content, text }) => {
   );
 };
 
-export default AccordionLogement;
+export default Accordion;

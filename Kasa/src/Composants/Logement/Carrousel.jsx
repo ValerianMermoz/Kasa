@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Flechegauche from "../../Images/Flechegauche.png";
 import Flechedroite from "../../Images/Flechedroite.png";
 import "../../Pages/Fichelogement/Fichelogement.scss";
-import useLogement from "./Datalogement";
+import Datalogement from "./Datalogement";
 
 const Carrousel = () => {
-  const logement = useLogement();
+  const logement = Datalogement();
   const [imageActuelle, setImageActuelle] = useState(0);
   const image = logement.pictures[imageActuelle];
   const compteur = `${imageActuelle + 1} / ${logement.pictures.length}`;

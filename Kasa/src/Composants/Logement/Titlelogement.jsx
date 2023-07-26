@@ -1,11 +1,11 @@
 import "../../Pages/Fichelogement/Fichelogement.scss";
 import "../../index.scss";
-import useLogement from "../Logement/Datalogement";
+import Datalogement from "../Logement/Datalogement";
 import { ReactComponent as Etoile } from "../../Images/etoile.svg";
 import { ReactComponent as EtoileCouleur } from "../../Images/etoileCouleur.svg";
 
-const Titrelogement = () => {
-  const { title, location, host, tags, rating } = useLogement();
+const titleLogement = () => {
+  const { title, location, host, tags, rating } = Datalogement();
  
   const maxRating = 5;
   const etoiles =
@@ -42,4 +42,4 @@ const Titrelogement = () => {
   );
 };
 
-export default Titrelogement;
+export default titleLogement;

@@ -1,5 +1,5 @@
 import React from "react";
-import Accordion from "./Accordion";
+import Accordion from "../../Composants/Accordion/Accordion";
 import Banner from "../../Composants/Banners/Banner";
 import img from "../../Images/Bannerpropos.png";
 

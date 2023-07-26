@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import Data from "../../annonces";
 
-const useLogement = () => {
+const Datalogement = () => {
   const { id } = useParams();
 
   if (!Data || Data.length === 0) {
@@ -19,4 +19,4 @@ const useLogement = () => {
   return logement;
 };
 
-export default useLogement;
+export default Datalogement;

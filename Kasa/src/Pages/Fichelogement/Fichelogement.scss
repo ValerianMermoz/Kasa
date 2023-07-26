@@ -9,7 +9,7 @@
   margin: 50px 50px;
   position: relative;
   @include s.mobile-only {
-    margin: 50px 20px;
+    margin: 20px 10px;
   }
 
   & .carrousel_img {
@@ -40,14 +40,14 @@
     font-size: 18px;
     font-weight: 500;
     letter-spacing: -2px;
-    @include s.mobile-only {
+    @include s.tablette-only {
       display: none;
     }
   }
 }
 ///
-.detailsLog{
-  display:flex;
+.detailsLog {
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 0px 50px;
@@ -58,21 +58,26 @@
   .titre {
     display: flex;
     flex-direction: column;
-    gap:20px;
+    gap: 20px;
     .titre_info {
-     
       color: #ff6060;
       h1 {
         font-size: 51px;
         font-weight: 300;
         line-height: 50px;
         color: #ff6060;
-        @include s.mobile-only {
+        @include s.tablette-only {
           font-size: 35px;
+        }
+        @include s.mobile-only {
+          font-size: 24px;
         }
       }
       p {
         color: #ff6060;
+        @include s.mobile-only {
+          font-size: 18px;
+        }
       }
     }
     .infostags {
@@ -89,18 +94,21 @@
         white-space: nowrap;
         oveflow: hidden;
         text-overflow: ellipsis;
+        @include s.mobile-only {
+          font-size: 12px;
+        }
       }
     }
   }
-  .infos{
+  .infos {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    gap:20px;
+    gap: 20px;
     @include s.mobile-only {
       flex-direction: row-reverse;
-      justify-content : space-between;
-      align-items : end;
+      justify-content: space-between;
+      align-items: end;
     }
     .etoiles {
       display: flex;
@@ -113,38 +121,43 @@
       display: flex;
       flex-direction: row;
       gap: 20px;
+      align-items: end;
       @include s.mobile-only {
-        align-items : end;
+        align-items: end;
       }
       p {
         color: #ff6060;
         font-size: 20px;
         font-weight: 500;
+        @include s.mobile-only {
+          font-size: 14px;
+        }
       }
-      
+
       .photovendeur {
         border-radius: 50px;
         object-fit: cover;
         width: 64px;
       }
-     
-  }  
+    }
+  }
 }
-}
-
 
 .Accordionlog {
   display: flex;
   flex-direction: row;
   width: 100%;
 
-  @include s.mobile-only {
+  @include s.tablette-only {
     flex-direction: column;
   }
 
   & .accordion-item {
     width: 50%;
     margin: 50px 50px;
+    @include s.tablette-only {
+      width : auto;
+    }
     & h2 {
       font-weight: 500;
       font-size: 24px;
@@ -153,8 +166,8 @@
     }
 
     @include s.mobile-only {
-      width : auto;
-      flex:1;
+      width: auto;
+      flex: 1;
       margin: 25px 20px;
     }
   }
@@ -167,6 +180,12 @@
     background-color: #ff6060;
     padding: 1rem;
     border-radius: 15px;
+
+    & h2 {
+      @include s.mobile-only {
+        font-size : 14px;
+      }
+    }
 
     & .Chevron {
       display: flex;
@@ -196,6 +215,9 @@
   .accordion-content.ouvert {
     animation: openModal 0.5s ease-in-out forwards;
     transform-origin: top center;
+    @include s.mobile-only {
+      font-size : 14px;
+    }
   }
 
   & li {

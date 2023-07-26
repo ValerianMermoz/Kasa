@@ -1,9 +1,9 @@
 import React from "react";
 import Data from '../../annonces';
 import { useParams } from 'react-router-dom';
-import Accordionlogement from "../../Composants/Logement/Accordionlogement"
-import Titrelogement from "../../Composants/Logement/Contenulogement";
-import Carrousel from "../../Composants/Logement/CarrouselComposent";
+import Accordion from "../../Composants/Accordion/Accordion"
+import Titlelogement from "../../Composants/Logement/Titlelogement";
+import Carrousel from "../../Composants/Logement/Carrousel";
 import Error from "../D404/D404";
 
 
@@ -18,10 +18,10 @@ const FicheLogement = () => {
     return ( 
         <div>
             <Carrousel/>
-            <Titrelogement/>
+            <Titlelogement/>
             <section className='Accordionlog'>
-            <Accordionlogement text="Description" content={logement.description}/>
-            <Accordionlogement text="Equipement" content={<ul>{logement.equipments.map((equipements) => <li key={equipements}>{equipements}</li>)}</ul>}/>
+            <Accordion text="Description" content={logement.description}/>
+            <Accordion text="Equipement" content={<ul>{logement.equipments.map((equipements) => <li key={equipements}>{equipements}</li>)}</ul>}/>
             </section>
             
 </div>

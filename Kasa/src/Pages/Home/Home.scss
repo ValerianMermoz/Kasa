@@ -9,6 +9,12 @@
   background-color: #f6f6f6;
   border-radius: 40px;
   padding: 40px;
+  @include s.mobile-only {
+    background-color : transparent;
+    padding : 0px;
+    margin : 10px;
+    gap : 20px;
+  }
 
   & .Card {
     position: relative;
@@ -17,7 +23,7 @@
     border-radius: 15px;
     background: linear-gradient(0.5turn, #ff6060, #9c5757);
     cursor: pointer;
-    @include s.mobile-only {
+    @include s.tablette-only {
       width: 100%;
     }
     & a {

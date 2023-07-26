@@ -1,24 +1,37 @@
 @use "../../index.scss" as s;
 
 .texterreur {
+  height : 650px;
   display: flex;
   color: #ff6060;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 80px;
-  padding-top: 80px;
-  padding-bottom: 80px;
-
-  & .Erreurimg {
-    width: 30%;
-  }
+  padding: 80px 0 80px;
 
   @include s.mobile-only {
+    height : 500px;
+    padding: 80px 80px 140px 80px;
+  }
+
+  & .Erreurimg {
+    @include s.mobile-only {
+      width: 200px;
+    }
+  }
+  & h4 {
     text-align: center;
+    @include s.mobile-only {
+      font-size: 18px;
+      text-align: center;
+    }
   }
 
   & a {
     text-decoration: underline;
+    @include s.mobile-only {
+      font-size: 14px;
+    }
   }
 }

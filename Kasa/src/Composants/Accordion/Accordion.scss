@@ -7,7 +7,7 @@
   margin: 2rem auto;
   gap: 25px;
   @include s.mobile-only {
-    max-width: 85%;
+    max-width: 95%;
   }
   & .accordion-title {
     display: flex;
@@ -21,6 +21,9 @@
       font-weight: 500;
       font-size: 24px;
       color: white;
+      @include s.mobile-only {
+        font-size : 14px;
+      }
     }
   }
 
@@ -42,6 +45,9 @@
     background-color: #f6f6f6;
     padding: 1rem;
     border-radius: 5px;
+    @include s.mobile-only {
+      font-size : 14px;
+    }
   }
   .accordion-content.ouvert {
     animation: openModal 0.5s ease-in-out forwards;
@@ -52,6 +58,9 @@
 .filters__chevron {
   border-radius: 2px;
   transition: all 0.5s linear;
+  @include s.tablette-only {
+   width : 20px;
+  }
 }
 
 .filters__chevron.rotate {
