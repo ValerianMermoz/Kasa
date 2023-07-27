@@ -2,8 +2,8 @@ import React from "react";
 import Accordion from "../../Composants/Accordion/Accordion";
 import Banner from "../../Composants/Banners/Banner";
 import img from "../../Images/Bannerpropos.png";
-
-const Apropos = () => {
+import './About.scss';
+const About = () => {
   const accordionData = [
     {
       title: "Fiabilité",
@@ -24,7 +24,7 @@ const Apropos = () => {
   ];
 
   return (
-    <div>
+    <div className="About">
       <Banner image={img} />
       <div className="accordion">
         {accordionData.map(({ title, content }) => (
@@ -35,4 +35,4 @@ const Apropos = () => {
   );
 };
 
-export default Apropos;
+export default About;

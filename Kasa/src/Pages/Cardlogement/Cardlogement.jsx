@@ -7,7 +7,7 @@ import Carrousel from "../../Composants/Logement/Carrousel";
 import Error from "../D404/D404";
 
 
-const FicheLogement = () => {
+const Cardlogement = () => {
     const {id} = useParams();
  
     const logement = Data.find((item) => item.id === id)
@@ -15,18 +15,23 @@ const FicheLogement = () => {
     return ( <> <Error /> </> );
    }
 
+   const equipements = logement.equipments.map((equipement, index) => (
+    <li key={index}>{equipement} </li>
+  ));
+
     return ( 
         <div>
             <Carrousel/>
             <Titlelogement/>
             <section className='Accordionlog'>
             <Accordion text="Description" content={logement.description}/>
-            <Accordion text="Equipement" content={<ul>{logement.equipments.map((equipements) => <li key={equipements}>{equipements}</li>)}</ul>}/>
+            <Accordion text="Equipement" content={<ul>{equipements}</ul>}/>
+  
             </section>
             
 </div>
     );
 };
 
-export default FicheLogement;
+export default Cardlogement;
 

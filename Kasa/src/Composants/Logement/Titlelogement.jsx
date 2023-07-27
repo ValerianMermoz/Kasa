@@ -1,4 +1,4 @@
-import "../../Pages/Fichelogement/Fichelogement.scss";
+import "../../Pages/Cardlogement/Cardlogement.scss";
 import "../../index.scss";
 import Datalogement from "../Logement/Datalogement";
 import { ReactComponent as Etoile } from "../../Images/etoile.svg";
@@ -10,9 +10,9 @@ const titleLogement = () => {
   const maxRating = 5;
   const etoiles =
   Array.from({ length: maxRating }, (_, index) => (
-  <>
+  <div key={index}>
   {index < rating ? <EtoileCouleur/> : <Etoile/> }
-  </>
+  </div>
   ));
 
   return (
@@ -20,13 +20,14 @@ const titleLogement = () => {
       <section className="detailsLog">
         <div className="titre">
           <div className="titre_info">
-            <h1>{title}</h1>
+            <h3>{title}</h3>
             <p>{location}</p>
           </div>
           <div className="infostags">
             {tags.map((tag, index) => (
-              <p key={index}>{tag}</p>
-            ))}
+             <p key={index}>{tag}</p>
+            ))
+            }
           </div>
          
         </div>

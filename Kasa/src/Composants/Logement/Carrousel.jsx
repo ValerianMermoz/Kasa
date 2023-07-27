@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Flechegauche from "../../Images/Flechegauche.png";
 import Flechedroite from "../../Images/Flechedroite.png";
-import "../../Pages/Fichelogement/Fichelogement.scss";
+import "../../Pages/Cardlogement/Cardlogement.scss";
 import Datalogement from "./Datalogement";
 
 const Carrousel = () => {

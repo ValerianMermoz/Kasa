@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 function Card({ id, picture, title }) {
-  const path = `/Fichelogement/${id}`;
+  const path = `/Cardlogement/${id}`;
   let history = useNavigate();
   function handleClick() {
     history(path);

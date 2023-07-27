@@ -3,11 +3,10 @@
 .accordion {
   display: flex;
   flex-direction: column;
-  max-width: 75%;
-  margin: 2rem auto;
-  gap: 25px;
+  gap: 15px;
+  margin-bottom: 15px;
   @include s.mobile-only {
-    max-width: 95%;
+
   }
   & .accordion-title {
     display: flex;

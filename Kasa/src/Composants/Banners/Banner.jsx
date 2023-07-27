@@ -5,7 +5,7 @@ const Banner = ({ image, text, page }) => {
     <div className="Bannerimg">
       <img src={image} alt="" className={page === "Home" ? "Bannerimage" : "Bannerlarge"}/>
       <div className="texte">
-        <h3>{text}</h3>
+        <h1>{text}</h1>
       </div>
     </div>
   );

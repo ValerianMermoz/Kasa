@@ -2,13 +2,12 @@
 
 .Footer {
   background-color: black;
-  width: 100%;
   height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 30px;
 
   & .footernav {
     @include s.mobile-only {

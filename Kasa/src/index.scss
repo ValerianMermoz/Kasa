@@ -1,3 +1,15 @@
+@mixin tablette-only {
+  @media screen and (max-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin mobile-only {
+  @media screen and (max-width: 550px) {
+    @content;
+  }
+}
+
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -27,14 +39,16 @@ code {
     monospace;
 }
 
-@mixin tablette-only {
-  @media screen and (max-width: 1000px) {
-    @content;
+#root{
+  min-width: 375px;
+  & .content {
+    margin : 10px 50px 0px 50px;
+    display : flex;
+    flex-direction : column;
+    gap : 15px;
+    @include mobile-only {
+      margin : 10px 20px 0px 20px;
+    }
   }
 }
 
-@mixin mobile-only {
-  @media screen and (max-width: 550px) {
-    @content;
-  }
-}
