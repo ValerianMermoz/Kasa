@@ -8,26 +8,13 @@
   gap: unset;
 
   & .Logo {
-    height : 70px;
+    height: 70px;
 
     @include s.mobile-only {
       height: 50px;
     }
   }
 
-  & h2 {
-    color: white;
-  }
-  & a {
-    font-size: 22px;
-    color: #ff6060;
-    text-decoration: none;
-    @include s.mobile-only {
-      font-size: 13px;
-      font-weight: 500;
-      text-transform: uppercase;
-    }
-  }
   & .headernav {
     width: unset;
     display: flex;
@@ -36,5 +23,19 @@
     @include s.mobile-only {
       gap: 20px;
     }
+    & .link {
+      font-size: 22px;
+      color: #ff6060;
+      text-decoration: none;
+      @include s.mobile-only {
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+
+    }
+  }
+  & .link.actif {
+    text-decoration: underline;
   }
 }
