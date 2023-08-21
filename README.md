@@ -1,6 +1,6 @@
 <h1>Kasa</h1>
 <p>Site d'annonces immobilières</p>
-<h2>Créez une application web de location immobilière avec React</h2>
+<h2>Objectif : Créez une application web de location immobilière avec React</h2>
 <h3>Compétences</h3>
 <li>Configurez la navigation entre les pages de l'application avec React Router</li>
 <li>Développer une interface web avec Sass</li>
